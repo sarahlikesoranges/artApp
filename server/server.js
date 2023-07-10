@@ -1,6 +1,7 @@
-var express = requires('express');
+var express = require('express');
 var app = express();
-var cors = requires('cors');
+var cors = require('cors');
+const MongoClient = require('mongodb').MongoClient;
 app.use(express.json);
 app.use(express.urlencoded());
 
@@ -16,3 +17,5 @@ app.use(function(req,res, next){
     next();
 })
 app.listen(3000);
+
+console.log("hello");
